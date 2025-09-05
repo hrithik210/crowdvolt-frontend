@@ -489,11 +489,10 @@ export default function HowWeWork() {
         </linearGradient>
       </defs>
     </svg>,
-
   ];
 
   return (
-    <section className="md:py-20 w-full md:px-6 relative overflow-x-hidden">
+    <section className="md:py-20 w-full md:px-6 relative overflow-visible">
       <div className="max-w-7xl mx-auto relative">
         {/* keep your left-side large SVG and main container unchanged */}
         <svg
@@ -508,16 +507,18 @@ export default function HowWeWork() {
         </svg>
         <div className="relative z-10 md:bg-gradient-to-b from-black/50 to-crowdvolt-gradient-start/50 md:rounded-[50px] md:border-t md:border-white/10 md:p-12 overflow-visible">
           {/* Header (unchanged) */}
-          <div className="text-center mb-0 md:mb-16">
-            <div className="flex items-center justify-center gap-2 mb-6">
+          <div className="text-left sm:text-center mb-0 md:mb-16">
+            <div className="flex items-center sm:justify-center gap-2 mb-6 ml-8">
               <h2 className="text-5xl lg:text-7xl font-medium text-text-primary">
                 How
               </h2>
-              <h2 className="text-5xl lg:text-7xl font-serif italic text-text-primary">
-                we work.
+              <h2 className="text-5xl lg:text-7xl font-serif italic flex">
+                we work
+                <span className="sm:hidden">:</span>
+                <span className="hidden sm:inline">.</span>
               </h2>
             </div>
-            <p className="text-gray-medium text-lg max-w-lg mx-auto md:mb-8 mb-0">
+            <p className="text-gray-medium text-md md:text-lg max-w-lg text-right md:text-center mr-5 md:mx-auto md:mb-8 mb-0">
               CrowdVolt is a social platform where fans can securely and
               seamlessly buy, sell, or offer on tickets to the shows they love.
             </p>
@@ -545,27 +546,23 @@ export default function HowWeWork() {
               EXPLORE EVENTS
             </button>
           </div>
+        </div>
 
-          {/* Mobile-only balls layout (zigzag) */}
-          <div className="md:hidden overflow-x-hidden">
-            {mobileSvgs.map((Svg, i) => (
-              <div
-                key={i}
-                className={`flex ${
-                  i % 2 === 0 ? "justify-start pl-4" : "justify-end pr-4"
-                } transform transition-transform duration-500 will-change-transform ${
-                  i > 0 ? "-mt-52" : ""
-                }`}
-                style={{
-                  transform:
-                    i % 2 === 0 ? "translateX(-10px)" : "translateX(10px)",
-                }}
-                aria-hidden
-              >
-                <div className="relative max-w-full overflow-hidden">{Svg}</div>
-              </div>
-            ))}
-          </div>
+        {/* Mobile-only balls layout (zigzag) */}
+        <div className="md:hidden">
+          {mobileSvgs.map((Svg, i) => (
+            <div
+              key={i}
+              className={`flex ${
+                i % 2 === 0 ? "justify-start" : "justify-end"
+              } transform transition-transform duration-500 will-change-transform ${
+                i > 0 ? "-mt-52" : ""
+              }`}
+              aria-hidden
+            >
+              <div className="relative">{Svg}</div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

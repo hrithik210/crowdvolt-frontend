@@ -76,7 +76,7 @@ export default function Footer() {
 
             {/* Social Icons */}
             <div>
-              <div className="flex flex-row md:flex-col items-center space-x-3 md:space-x-0 space-y-0 md:space-y-4">
+             <div className="flex flex-row md:flex-col items-center space-x-3 md:space-x-0 space-y-0 md:space-y-4">
                 {/* Instagram */}
                 <a href="#" className="hover:scale-110 transition-transform">
                   <svg width="26" height="25" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg">
