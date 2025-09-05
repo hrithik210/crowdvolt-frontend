@@ -28,7 +28,7 @@ export default function HowWeWork() {
           viewBox="0 0 519 788" 
           fill="none" 
           xmlns="http://www.w3.org/2000/svg"
-          className="absolute -left-[50px] -top-[250px] z-0"
+          className="hidden md:block absolute -left-[50px] -top-[250px] z-0"
         >
           <g filter="url(#filter0_f_1_605)">
             <path d="M360.848 91.8068H370.9C374.648 91.8069 377.906 93.9682 379.904 97.3342C381.904 100.702 382.555 105.164 381.087 109.46L256.696 473.394C254.977 478.413 250.869 481.487 246.51 481.487H234.354C228.208 481.486 222.832 475.372 223.412 467.705C224.307 455.895 221.451 445.513 215.357 438.051C209.241 430.561 200.005 426.191 188.542 426.191C175.824 426.191 162.513 431.559 150.821 440.264C139.117 448.978 128.914 461.124 122.425 474.888V474.889C120.456 479.07 116.727 481.502 112.846 481.502H102.793C99.0454 481.502 95.7865 479.341 93.7881 475.975C91.7885 472.607 91.1369 468.145 92.6055 463.849L216.996 99.9172C218.715 94.8973 222.823 91.8235 227.183 91.8234H239.339C245.484 91.8234 250.861 97.938 250.281 105.605C249.387 117.414 252.242 127.796 258.335 135.258C264.451 142.748 273.687 147.119 285.15 147.119C297.868 147.119 311.18 141.75 322.871 133.045C334.575 124.331 344.778 112.185 351.268 98.4211L351.269 98.4201C353.237 94.2394 356.966 91.8068 360.848 91.8068Z" fill="#771ADA" stroke="#7719DC" strokeWidth="3.6141"/>
@@ -45,9 +45,9 @@ export default function HowWeWork() {
         
         
         {/* Main container */}
-        <div className="relative z-10 bg-gradient-to-b from-black/50 to-crowdvolt-gradient-start/50 rounded-[50px] border-t border-white/10 p-12 overflow-visible">
+        <div className="relative z-10 bg-gradient-to-b from-black/50 to-crowdvolt-gradient-start/50 rounded-[50px] border-t border-white/10 p-2 md:p-12 overflow-visible">
             {/* Header */}
-            <div className="text-center mb-16">
+            <div className="text-center mb-0 md:mb-16">
               <div className="flex items-center justify-center gap-2 mb-6">
                 <h2 className="text-5xl lg:text-7xl font-medium text-text-primary">
                   How
@@ -56,13 +56,13 @@ export default function HowWeWork() {
                   we work.
                 </h2>
               </div>
-              <p className="text-gray-medium text-lg max-w-lg mx-auto">
+              <p className="text-gray-medium text-lg max-w-lg mx-auto md:mb-8 mb-0">
                 CrowdVolt is a social platform where fans can securely and seamlessly buy, sell, or offer on tickets to the shows they love.
               </p>
             </div>
 
-            {/* Steps grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            {/* Steps grid (hidden on mobile) */}
+            <div className="hidden md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
               {steps.map((step, index) => (
                 <div key={index} className="text-center">
                   <div className="rounded-3xl h-48 flex flex-col justify-end p-6">
@@ -77,11 +77,66 @@ export default function HowWeWork() {
               ))}
             </div>
 
-            {/* CTA Button */}
-            <div className="text-center">
+            {/* CTA Button (hidden on mobile) */}
+            <div className="hidden md:block text-center">
               <button className="bg-transparent border border-crowdvolt-blue-alt rounded-full px-12 py-4 text-text-primary font-medium text-xl hover:bg-crowdvolt-blue-alt hover:bg-opacity-10 transition-all duration-300 shadow-lg">
                 EXPLORE EVENTS
               </button>
+            </div>
+
+            {/* Mobile-only balls layout */}
+            <div className="md:hidden grid grid-cols-2 gap-0 place-items-center">
+              {/* BID ball */}
+              <div
+                className="rounded-full flex items-center justify-center text-white font-semibold"
+                style={{
+                  width: '137px',
+                  height: '140.1314239501953px',
+                  background: 'linear-gradient(57.54deg, #5073FF 34.39%, #010824 91.56%)',
+                  opacity: 1
+                }}
+              >
+                BID
+              </div>
+
+              {/* OFFER ball */}
+              <div
+                className="rounded-full flex items-center justify-center text-white font-semibold"
+                style={{
+                  width: '208.24021911621094px',
+                  height: '213px',
+                  background: 'linear-gradient(57.54deg, #7419B5 34.39%, #010824 91.56%)',
+                  opacity: 1
+                }}
+              >
+                OFFER
+              </div>
+
+              {/* BUY ball */}
+              <div
+                className="rounded-full flex items-center justify-center text-white font-semibold"
+                style={{
+                  width: '175px',
+                  height: '179px',
+                  background: 'linear-gradient(57.54deg, #FC009E 34.39%, #010824 91.56%)',
+                  opacity: 1
+                }}
+              >
+                BUY
+              </div>
+
+              {/* DANCE ball */}
+              <div
+                className="rounded-full flex items-center justify-center text-white font-semibold"
+                style={{
+                  width: '208.24021911621094px',
+                  height: '213px',
+                  background: 'linear-gradient(57.54deg, #FE5600 34.39%, #010824 91.56%)',
+                  opacity: 1
+                }}
+              >
+                DANCE
+              </div>
             </div>
         </div>
       </div>
