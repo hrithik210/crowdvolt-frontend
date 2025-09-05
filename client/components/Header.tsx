@@ -14,15 +14,15 @@ export default function Header() {
         </div>
 
         {/* Search Bar */}
-        <div className="flex-1 max-w-md mx-8">
+        <div className="flex-1 max-w-lg mx-8">
           <div className="relative">
             <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-              <Search className="h-5 w-5 text-white" />
+              <Search className="h-5 w-5 text-gray-500" />
             </div>
             <input
               type="text"
               placeholder="Search by event or venue"
-              className="w-full bg-transparent border border-gray-text rounded-full py-2.5 pl-12 pr-4 text-white placeholder-white text-sm focus:outline-none focus:border-white transition-colors"
+              className="w-full bg-transparent border border-gray-500 rounded-full py-2.5 pl-12 pr-4 text-white placeholder-white text-sm focus:outline-none focus:border-white transition-colors"
             />
           </div>
         </div>
