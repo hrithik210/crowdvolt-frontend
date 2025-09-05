@@ -12,7 +12,6 @@ export default function Index() {
       <Header />
       <main>
         <HeroSection />
-        <FeatureBadges />
         <HowWeWork />
         <BelieveSection />
         <CitiesSection />
