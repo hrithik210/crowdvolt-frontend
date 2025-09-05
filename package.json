@@ -13,11 +13,9 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "build:client": "vite build",
-    "preview": "vite preview",
-    "test": "vitest --run",
-    "format.fix": "prettier --write .",
-    "typecheck": "tsc"
+    "build:dev": "vite build --mode development",
+    "lint": "eslint .",
+    "preview": "vite preview"
   },
   "dependencies": {
     "dotenv": "^17.2.1",
