@@ -19,7 +19,7 @@ export default function HowWeWork() {
   ];
 
   return (
-    <section className="py-20 px-6 relative overflow-visible">
+    <section className="pt-2 pb-6 md:py-20 px-6 relative overflow-visible">
       <div className="max-w-7xl mx-auto relative">
         {/* SVG on the left extending outside container */}
         <svg 
@@ -45,7 +45,7 @@ export default function HowWeWork() {
         
         
         {/* Main container */}
-        <div className="relative z-10 bg-gradient-to-b from-black/50 to-crowdvolt-gradient-start/50 rounded-[50px] border-t border-white/10 p-2 md:p-12 overflow-visible">
+        <div className="relative z-10 bg-transparent md:bg-gradient-to-b md:from-black/50 md:to-crowdvolt-gradient-start/50 rounded-[50px] md:border-t md:border-white/10 p-2 md:p-12 overflow-visible">
             {/* Header */}
             <div className="text-center mb-0 md:mb-16">
               <div className="flex items-center justify-center gap-2 mb-6">
@@ -93,7 +93,7 @@ export default function HowWeWork() {
                   width: '137px',
                   height: '140.1314239501953px',
                   background: 'linear-gradient(57.54deg, #5073FF 34.39%, #010824 91.56%)',
-                  opacity: 1
+                  opacity: 0.6,
                 }}
               >
                 BID
@@ -106,7 +106,8 @@ export default function HowWeWork() {
                   width: '208.24021911621094px',
                   height: '213px',
                   background: 'linear-gradient(57.54deg, #7419B5 34.39%, #010824 91.56%)',
-                  opacity: 1
+                  opacity: 0.6,
+               
                 }}
               >
                 OFFER
@@ -119,7 +120,7 @@ export default function HowWeWork() {
                   width: '175px',
                   height: '179px',
                   background: 'linear-gradient(57.54deg, #FC009E 34.39%, #010824 91.56%)',
-                  opacity: 1
+                  opacity: 0.6,
                 }}
               >
                 BUY
@@ -132,7 +133,7 @@ export default function HowWeWork() {
                   width: '208.24021911621094px',
                   height: '213px',
                   background: 'linear-gradient(57.54deg, #FE5600 34.39%, #010824 91.56%)',
-                  opacity: 1
+                  opacity: 0.6,
                 }}
               >
                 DANCE
