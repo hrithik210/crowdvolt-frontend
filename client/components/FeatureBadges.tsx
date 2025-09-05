@@ -17,7 +17,9 @@ export default function FeatureBadges() {
   // Update visible count based on screen size
   useEffect(() => {
     const updateVisibleCount = () => {
-      if (window.innerWidth < 640) {
+      if (window.innerWidth < 480) {
+        setVisibleCount(1);
+      } else if (window.innerWidth < 640) {
         setVisibleCount(2);
       } else if (window.innerWidth < 1024) {
         setVisibleCount(3);
@@ -49,7 +51,7 @@ export default function FeatureBadges() {
   };
 
   return (
-    <section className="py-6 md:py-16 w-full">
+    <section className="py-4 sm:py-6 md:py-10 lg:py-16 w-full">
       <div className="w-full">
         <div className="relative">
           {/* Navigation buttons */}
@@ -70,9 +72,9 @@ export default function FeatureBadges() {
           </button>
 
           {/* Carousel container */}
-          <div className="overflow-hidden px-16">
+          <div className="overflow-hidden px-10 sm:px-16">
             <div 
-              className="flex gap-6 transition-transform duration-500 ease-in-out"
+              className="flex gap-4 sm:gap-6 transition-transform duration-500 ease-in-out"
               style={{
                 transform: `translateX(-${currentIndex * (100 / visibleCount)}%)`
               }}
@@ -81,10 +83,10 @@ export default function FeatureBadges() {
                 <>
                   <div
                     key={index}
-                    className="flex-shrink-0 bg-crowdvolt-gradient rounded-full px-4 md:px-8 py-2 md:py-3"
+                    className="flex-shrink-0 bg-crowdvolt-gradient rounded-full px-3 sm:px-4 md:px-8 py-1.5 sm:py-2 md:py-3 flex items-center justify-center"
                     style={{ width: `calc(${100 / visibleCount}% - ${24 / visibleCount}px)` }}
                   >
-                    <span className={`text-sm md:text-lg font-medium ${
+                    <span className={`text-xs sm:text-sm md:text-lg font-medium text-center ${
                       feature === "Bid/Ask" ? "text-gray-text" : "text-gray-light"
                     }`}>
                       {feature}

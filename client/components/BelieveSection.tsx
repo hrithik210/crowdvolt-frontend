@@ -1,31 +1,31 @@
 export default function BelieveSection() {
   return (
-    <section className="py-20 px-6">
+    <section className="py-8 sm:py-16 md:py-20 px-4 sm:px-6 bg-black text-white">
       <div className="max-w-7xl mx-auto">
-        <div className="mb-12">
-          <div className="flex items-center gap-2 mb-8">
-            <h2 className="text-4xl lg:text-5xl font-medium text-white">
+        <div className="mb-6 sm:mb-12">
+          <div className="flex flex-col sm:flex-row items-center sm:items-center gap-0 xs:gap-1 mb-4 sm:mb-8 text-center sm:text-left">
+            <h2 className="text-2xl xs:text-3xl sm:text-4xl lg:text-5xl font-medium text-white">
               Built on What
             </h2>
-            <h2 className="text-4xl lg:text-5xl font-serif italic text-white">
+            <h2 className="text-2xl xs:text-3xl sm:text-4xl lg:text-5xl font-serif italic text-white">
               We Believe
             </h2>
           </div>
           
-          <div className="max-w-5xl text-gray-dark text-lg lg:text-xl leading-relaxed space-y-6">
-            <p>
-              At CrowdVolt, integrity is at the heart of what we do. By connecting real people on both sides of every exchange, we keep the process transparent, simple, and built for the community we love. We put trust and ease first, making sure every transaction feels safe, fair, and seamless.
+          <div className="max-w-5xl mx-auto sm:mx-0 text-gray-dark text-sm xs:text-base lg:text-xl leading-relaxed space-y-3 sm:space-y-6 px-2 sm:px-0 text-center sm:text-left">
+            <p className="line-clamp-3 sm:line-clamp-none">
+              At CrowdVolt, integrity is at the heart of what we do. By connecting real people on both sides of every exchange, we keep the process transparent, simple, and built for the community we love.
             </p>
-            <p className="font-bold">
-              Contact us literally any time, we love our users. Seriously - even just to say hi.
+            <p className="font-bold text-sm xs:text-base sm:text-lg hidden xs:block">
+              Contact us literally any time, we love our users.
             </p>
           </div>
         </div>
 
         {/* Social proof icons */}
-        <div className="flex items-center gap-6">
+        <div className="flex flex-wrap justify-center sm:justify-start items-center gap-3 xs:gap-4 sm:gap-6 mt-4 sm:mt-0">
           {/* Instagram */}
-          <svg width="26" height="25" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg className="w-4 h-4 xs:w-5 xs:h-5 sm:w-[26px] sm:h-[25px]" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clipPath="url(#clip0_3_553)">
               <path d="M13.0001 2.40695C16.275 2.40695 16.6628 2.42131 17.9508 2.47877C19.1478 2.53144 19.7942 2.73253 20.2251 2.90011C20.7948 3.12035 21.2066 3.38848 21.6327 3.81461C22.0636 4.24552 22.327 4.6525 22.5472 5.22226C22.7148 5.65318 22.9159 6.30434 22.9686 7.49654C23.026 8.78928 23.0404 9.17711 23.0404 12.4473C23.0404 15.7222 23.026 16.1101 22.9686 17.398C22.9159 18.595 22.7148 19.2414 22.5472 19.6723C22.327 20.2421 22.0589 20.6538 21.6327 21.0799C21.2018 21.5109 20.7948 21.7742 20.2251 21.9944C19.7942 22.162 19.143 22.3631 17.9508 22.4158C16.6581 22.4732 16.2702 22.4876 13.0001 22.4876C9.72511 22.4876 9.33729 22.4732 8.04933 22.4158C6.85234 22.3631 6.20597 22.162 5.77505 21.9944C5.20529 21.7742 4.79352 21.5061 4.3674 21.0799C3.93648 20.649 3.67314 20.2421 3.4529 19.6723C3.28532 19.2414 3.08423 18.5902 3.03156 17.398C2.9741 16.1053 2.95974 15.7174 2.95974 12.4473C2.95974 9.17232 2.9741 8.78449 3.03156 7.49654C3.08423 6.29955 3.28532 5.65318 3.4529 5.22226C3.67314 4.6525 3.94127 4.24073 4.3674 3.81461C4.79831 3.38369 5.20529 3.12035 5.77505 2.90011C6.20597 2.73253 6.85713 2.53144 8.04933 2.47877C9.33729 2.42131 9.72511 2.40695 13.0001 2.40695ZM13.0001 0.199707C9.67244 0.199707 9.25589 0.214071 7.94878 0.271526C6.64646 0.328982 5.75111 0.539651 4.97546 0.841292C4.1663 1.1573 3.48163 1.57385 2.80174 2.25852C2.11706 2.93841 1.70051 3.62309 1.3845 4.42746C1.08286 5.2079 0.872194 6.09846 0.814739 7.40078C0.757284 8.71268 0.74292 9.12923 0.74292 12.4569C0.74292 15.7845 0.757284 16.201 0.814739 17.5081C0.872194 18.8105 1.08286 19.7058 1.3845 20.4814C1.70051 21.2906 2.11706 21.9753 2.80174 22.6552C3.48163 23.3351 4.1663 23.7564 4.97068 24.0676C5.75111 24.3693 6.64167 24.5799 7.94399 24.6374C9.2511 24.6948 9.66765 24.7092 12.9953 24.7092C16.3229 24.7092 16.7395 24.6948 18.0466 24.6374C19.3489 24.5799 20.2442 24.3693 21.0199 24.0676C21.8243 23.7564 22.5089 23.3351 23.1888 22.6552C23.8687 21.9753 24.29 21.2906 24.6013 20.4862C24.9029 19.7058 25.1136 18.8152 25.171 17.5129C25.2285 16.2058 25.2428 15.7893 25.2428 12.4616C25.2428 9.13402 25.2285 8.71746 25.171 7.41035C25.1136 6.10803 24.9029 5.21269 24.6013 4.43704C24.2996 3.62309 23.8831 2.93841 23.1984 2.25852C22.5185 1.57864 21.8338 1.1573 21.0295 0.84608C20.249 0.544439 19.3585 0.33377 18.0561 0.276314C16.7442 0.214071 16.3277 0.199707 13.0001 0.199707Z" fill="url(#paint0_linear_3_553)"/>
               <path d="M13 6.16064C9.52396 6.16064 6.70386 8.98074 6.70386 12.4568C6.70386 15.9328 9.52396 18.7529 13 18.7529C16.4761 18.7529 19.2962 15.9328 19.2962 12.4568C19.2962 8.98074 16.4761 6.16064 13 6.16064ZM13 16.5409C10.7449 16.5409 8.91589 14.7119 8.91589 12.4568C8.91589 10.2017 10.7449 8.37268 13 8.37268C15.2551 8.37268 17.0841 10.2017 17.0841 12.4568C17.0841 14.7119 15.2551 16.5409 13 16.5409Z" fill="url(#paint1_linear_3_553)"/>
@@ -51,7 +51,7 @@ export default function BelieveSection() {
           </svg>
 
           {/* LinkedIn */}
-          <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg className="w-4 h-4 xs:w-5 xs:h-5 sm:w-[26px] sm:h-[26px]" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clipPath="url(#clip0_3_555)">
               <path d="M23.4426 0.714111H2.55276C1.55208 0.714111 0.74292 1.50412 0.74292 2.48086V23.4569C0.74292 24.4336 1.55208 25.2284 2.55276 25.2284H23.4426C24.4433 25.2284 25.2572 24.4336 25.2572 23.4616V2.48086C25.2572 1.50412 24.4433 0.714111 23.4426 0.714111ZM8.01581 21.6039H4.37697V9.90218H8.01581V21.6039ZM6.19639 8.30779C5.02813 8.30779 4.08491 7.36457 4.08491 6.2011C4.08491 5.03763 5.02813 4.0944 6.19639 4.0944C7.35986 4.0944 8.30309 5.03763 8.30309 6.2011C8.30309 7.35978 7.35986 8.30779 6.19639 8.30779ZM21.6327 21.6039H17.9987V15.9158C17.9987 14.5609 17.9747 12.8133 16.1074 12.8133C14.2162 12.8133 13.9289 14.2927 13.9289 15.8201V21.6039H10.2997V9.90218H13.7853V11.5014H13.8332C14.3167 10.5821 15.5042 9.61012 17.2709 9.61012C20.9528 9.61012 21.6327 12.0328 21.6327 15.1833V21.6039Z" fill="url(#paint0_linear_3_555)"/>
             </g>
@@ -67,7 +67,7 @@ export default function BelieveSection() {
           </svg>
 
           {/* TikTok */}
-          <svg width="26" height="25" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg className="w-4 h-4 xs:w-5 xs:h-5 sm:w-[26px] sm:h-[25px]" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clipPath="url(#clip0_3_557)">
               <path d="M18.1814 0.228271H14.05V16.9264C14.05 18.916 12.4611 20.5503 10.4836 20.5503C8.50623 20.5503 6.91725 18.916 6.91725 16.9264C6.91725 14.9724 8.47092 13.3736 10.3777 13.3026V9.11027C6.17572 9.1813 2.78589 12.6275 2.78589 16.9264C2.78589 21.2608 6.24634 24.7426 10.519 24.7426C14.7915 24.7426 18.252 21.2253 18.252 16.9264V8.36415C19.8057 9.50107 21.7124 10.1761 23.7252 10.2116V6.01933C20.6178 5.91275 18.1814 3.35473 18.1814 0.228271Z" fill="url(#paint0_linear_3_557)"/>
             </g>
@@ -83,7 +83,7 @@ export default function BelieveSection() {
           </svg>
 
           {/* SoundCloud */}
-          <svg width="52" height="24" viewBox="0 0 52 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg className="w-8 h-4 xs:w-10 xs:h-4 sm:w-[52px] sm:h-[24px]" viewBox="0 0 52 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M2.51646 22.3816C2.62375 22.3816 2.71457 22.2933 2.73 22.1691L3.31323 17.5463L2.73173 12.8184C2.7144 12.6941 2.62375 12.6052 2.51646 12.6052C2.4064 12.6052 2.31263 12.696 2.29808 12.8184L1.78833 17.5463L2.29808 22.1675C2.31263 22.2916 2.4064 22.3816 2.51646 22.3816Z" fill="url(#paint0_linear_3_559)"/>
             <path d="M0.589514 20.6239C0.694895 20.6239 0.780343 20.5419 0.795769 20.4194L1.2478 17.5467L0.795769 14.6203C0.78017 14.5016 0.694895 14.4158 0.589514 14.4158C0.479453 14.4158 0.394178 14.5016 0.378578 14.622L0.000732422 17.5469L0.378578 20.4187C0.394178 20.5402 0.479453 20.6239 0.589514 20.6239Z" fill="url(#paint1_linear_3_559)"/>
             <path d="M4.81401 11.9365C4.80014 11.7862 4.69008 11.6765 4.5535 11.6765C4.41796 11.6765 4.30773 11.7862 4.29507 11.9365L3.80786 17.5444L4.29507 22.9476C4.30773 23.097 4.41796 23.2053 4.5535 23.2053C4.69008 23.2053 4.80014 23.097 4.81401 22.9476L5.36518 17.5444L4.81401 11.9365Z" fill="url(#paint2_linear_3_559)"/>

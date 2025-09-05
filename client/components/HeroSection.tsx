@@ -26,15 +26,15 @@ export default function HeroSection() {
         <div className="absolute bottom-32 left-1/4 w-48 h-48 border border-purple-300/10 transform rotate-45"></div>
       </div>
 
-      <div className="relative z-10 max-w-[1317px] mx-auto px-6 py-8 flex items-start justify-center md:justify-between min-h-[544px] mt-[100px] md:mt-[167px] w-full">
+      <div className="relative z-10 max-w-[1317px] mx-auto px-4 sm:px-6 py-6 sm:py-8 flex items-start justify-center md:justify-between min-h-[450px] sm:min-h-[500px] md:min-h-[544px] mt-[80px] sm:mt-[100px] md:mt-[167px] w-full">
         {/* Content - centered on mobile, left-aligned on desktop */}
         <div className="flex flex-col items-center md:items-start gap-12 max-w-[838px] mx-auto md:mx-0">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[96px] font-bold text-white leading-tight md:leading-[90px] tracking-tight text-center md:text-left">
-            No more excuses<br />
-            you're coming<br />
+          <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-[96px] font-bold text-white leading-tight md:leading-[90px] tracking-tight text-center md:text-left">
+            No more excuses<br className="hidden xs:block" />
+            you're coming<br className="hidden xs:block" />
             out tonight
           </h1>
-          <p className="text-lg md:text-xl lg:text-2xl text-[#B3B3B3] leading-relaxed md:leading-[33px] max-w-[838px] text-center md:text-left">
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-[#B3B3B3] leading-relaxed md:leading-[33px] max-w-[838px] text-center md:text-left px-2 sm:px-0">
             For the music lovers. Easy, secure, and stress-free ticketing that keeps
             the focus where it belongs: on the music.
           </p>
@@ -44,7 +44,7 @@ export default function HeroSection() {
               <div className="w-full h-full bg-black rounded-full"></div>
             </div>
             
-            <button className="relative flex items-center gap-2 md:gap-3 border-none rounded-full w-[240px] md:w-[298px] h-[50px] md:h-[70px] justify-center text-white font-medium text-base md:text-lg hover:bg-gradient-to-r hover:from-[#330BFF] hover:to-[#BF7272] hover:text-white transition-all duration-300 uppercase tracking-wide font-mono">
+            <button className="relative flex items-center gap-2 md:gap-3 border-none rounded-full w-[220px] xs:w-[240px] md:w-[298px] h-[45px] xs:h-[50px] md:h-[70px] justify-center text-white font-medium text-sm xs:text-base md:text-lg hover:bg-gradient-to-r hover:from-[#330BFF] hover:to-[#BF7272] hover:text-white transition-all duration-300 uppercase tracking-wide font-mono">
               JOIN THE PARTY
               <ArrowUpRight className="w-7 h-7 group-hover:rotate-45 transition-transform duration-300" />
             </button>
@@ -66,13 +66,8 @@ export default function HeroSection() {
       </div>
 
       {/* Feature Badges Section - Repositioned below button with full width */}
-      <div className="relative z-10 pb-4 md:pb-8 mt-8 w-full px-4 md:px-0">
-        <div className="hidden md:block">
-          <FeatureBadges />
-        </div>
-        <div className="md:hidden">
-          <FeatureBadges />
-        </div>
+      <div className="relative z-10 pb-4 md:pb-8 mt-6 sm:mt-8 w-full px-4 md:px-0">
+        <FeatureBadges />
       </div>
 
       {/* Bottom fade */}
