@@ -50,7 +50,7 @@ export default function FeatureBadges() {
               }}
             >
               {duplicatedFeatures.map((feature, index) => (
-                <div key={`${feature}-${index}`} className="flex items-center gap-2 sm:gap-6 flex-shrink-0">
+                <div key={`${feature}-${index}`} className="flex items-center gap-2 sm:gap-3 flex-shrink-0">
                   <div
                     className="flex-shrink-0 bg-crowdvolt-gradient rounded-full px-8 py-2 text-center flex items-center justify-center w-auto min-w-fit"
                   >
