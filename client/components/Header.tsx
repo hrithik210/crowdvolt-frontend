@@ -9,12 +9,12 @@ export default function Header() {
           <img 
             src="https://api.builder.io/api/v1/image/assets/TEMP/0cfd83c1b79f5ce3b99c914f3f7d3a122c07be42?width=226" 
             alt="CrowdVolt Logo" 
-            className="h-10 w-auto"
+            className="h-8 md:h-10 w-auto"
           />
         </div>
 
-        {/* Search Bar */}
-        <div className="flex-1 max-w-lg mx-8">
+        {/* Search Bar - Hidden on mobile */}
+        <div className="hidden md:block flex-1 max-w-lg mx-8">
           <div className="relative">
             <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
               <Search className="h-5 w-5 text-gray-500" />
@@ -28,18 +28,27 @@ export default function Header() {
         </div>
 
         {/* Navigation */}
-        <nav className="flex items-center space-x-8">
-          <a href="#" className="text-white font-medium hover:text-gray-200 transition-colors">
+        <nav className="flex items-center space-x-4 md:space-x-8">
+          <a href="#" className="hidden md:inline-block text-white font-medium hover:text-gray-200 transition-colors">
             Events
           </a>
-          <a href="#" className="text-white font-medium hover:text-gray-200 transition-colors">
+          <a href="#" className="hidden md:inline-block text-white font-medium hover:text-gray-200 transition-colors">
             About
           </a>
-          <a href="#" className="text-white font-medium hover:text-gray-200 transition-colors">
+          <a href="#" className="hidden md:inline-block text-white font-medium hover:text-gray-200 transition-colors">
             Help
           </a>
-          <button className="bg-transparent border border-transparent rounded-full px-4 py-2 text-white font-medium hover:bg-white hover:bg-opacity-10 transition-colors">
+          <button className="bg-transparent border border-transparent rounded-full px-3 py-1.5 md:px-4 md:py-2 text-white text-sm md:text-base font-medium hover:bg-white hover:bg-opacity-10 transition-colors">
             Log In
+          </button>
+          
+          {/* Mobile menu button */}
+          <button className="md:hidden text-white p-1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
           </button>
         </nav>
       </div>

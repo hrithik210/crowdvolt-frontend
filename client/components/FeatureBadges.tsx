@@ -49,24 +49,24 @@ export default function FeatureBadges() {
   };
 
   return (
-    <section className="py-16 w-full">
+    <section className="py-6 md:py-16 w-full">
       <div className="w-full">
         <div className="relative">
           {/* Navigation buttons */}
           <button
             onClick={prevSlide}
-            className="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-black/50 hover:bg-black/70 border border-white/20 rounded-full p-2 transition-all duration-300"
+            className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 z-10 bg-black/50 hover:bg-black/70 border border-white/20 rounded-full p-1 md:p-2 transition-all duration-300"
             aria-label="Previous features"
           >
-            <ChevronLeft className="w-6 h-6 text-white" />
+            <ChevronLeft className="w-4 h-4 md:w-6 md:h-6 text-white" />
           </button>
           
           <button
             onClick={nextSlide}
-            className="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-black/50 hover:bg-black/70 border border-white/20 rounded-full p-2 transition-all duration-300"
+            className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 z-10 bg-black/50 hover:bg-black/70 border border-white/20 rounded-full p-1 md:p-2 transition-all duration-300"
             aria-label="Next features"
           >
-            <ChevronRight className="w-6 h-6 text-white" />
+            <ChevronRight className="w-4 h-4 md:w-6 md:h-6 text-white" />
           </button>
 
           {/* Carousel container */}
@@ -81,10 +81,10 @@ export default function FeatureBadges() {
                 <>
                   <div
                     key={index}
-                    className="flex-shrink-0 bg-crowdvolt-gradient rounded-full px-8 py-3"
+                    className="flex-shrink-0 bg-crowdvolt-gradient rounded-full px-4 md:px-8 py-2 md:py-3"
                     style={{ width: `calc(${100 / visibleCount}% - ${24 / visibleCount}px)` }}
                   >
-                    <span className={`text-lg font-medium ${
+                    <span className={`text-sm md:text-lg font-medium ${
                       feature === "Bid/Ask" ? "text-gray-text" : "text-gray-light"
                     }`}>
                       {feature}
@@ -93,8 +93,9 @@ export default function FeatureBadges() {
                   {index < features.length - 1 && (
                     <div className="flex-shrink-0 flex items-center justify-center">
                       <svg 
-                        width="80" 
-                        height="60" 
+                        width="40" 
+                        height="30" 
+                        className="md:w-[80px] md:h-[60px]"
                         viewBox="0 0 80 60" 
                         fill="none" 
                         xmlns="http://www.w3.org/2000/svg"

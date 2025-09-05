@@ -5,9 +5,17 @@ export default function HeroSection() {
   return (
     <section className="relative min-h-screen bg-black overflow-hidden">
 
-      {/* Background with smooth gradient fade from black to purple */}
-      <div className="absolute inset-0" style={{
+      {/* Background with smooth gradient fade from black to purple (desktop) and L-shape gradient (mobile) */}
+      <div className="absolute inset-0 hidden md:block" style={{
         background: 'linear-gradient(90deg, #000000 0%, #000000 70%, #350789 100%)',
+        opacity: 0.6
+      }}></div>
+      {/* L-shaped gradient for mobile */}
+      <div className="absolute inset-0 md:hidden" style={{
+        background: 'linear-gradient(180deg, #000000 0%, #000000 70%, #350789 100%), linear-gradient(90deg, #000000 0%, #350789 100%)',
+        backgroundPosition: 'right top, left bottom',
+        backgroundSize: '100% 100%, 100% 30%',
+        backgroundRepeat: 'no-repeat',
         opacity: 0.6
       }}></div>
       
@@ -18,15 +26,15 @@ export default function HeroSection() {
         <div className="absolute bottom-32 left-1/4 w-48 h-48 border border-purple-300/10 transform rotate-45"></div>
       </div>
 
-      <div className="relative z-10 max-w-[1317px] mx-auto px-6 py-8 flex items-start justify-between min-h-[544px] mt-[167px]">
-        {/* Left content */}
-        <div className="flex flex-col items-start gap-12 max-w-[838px]">
-          <h1 className="text-6xl lg:text-[96px] font-bold text-white leading-[90px] tracking-tight">
+      <div className="relative z-10 max-w-[1317px] mx-auto px-6 py-8 flex items-start justify-center md:justify-between min-h-[544px] mt-[100px] md:mt-[167px] w-full">
+        {/* Content - centered on mobile, left-aligned on desktop */}
+        <div className="flex flex-col items-center md:items-start gap-12 max-w-[838px] mx-auto md:mx-0">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[96px] font-bold text-white leading-tight md:leading-[90px] tracking-tight text-center md:text-left">
             No more excuses<br />
             you're coming<br />
             out tonight
           </h1>
-          <p className="text-2xl text-[#B3B3B3] leading-[33px] max-w-[838px]">
+          <p className="text-lg md:text-xl lg:text-2xl text-[#B3B3B3] leading-relaxed md:leading-[33px] max-w-[838px] text-center md:text-left">
             For the music lovers. Easy, secure, and stress-free ticketing that keeps
             the focus where it belongs: on the music.
           </p>
@@ -36,15 +44,15 @@ export default function HeroSection() {
               <div className="w-full h-full bg-black rounded-full"></div>
             </div>
             
-            <button className="relative flex items-center gap-3 border-none rounded-full w-[298px] h-[70px] justify-center text-white font-medium text-lg hover:bg-gradient-to-r hover:from-[#330BFF] hover:to-[#BF7272] hover:text-white transition-all duration-300 uppercase tracking-wide font-mono">
+            <button className="relative flex items-center gap-2 md:gap-3 border-none rounded-full w-[240px] md:w-[298px] h-[50px] md:h-[70px] justify-center text-white font-medium text-base md:text-lg hover:bg-gradient-to-r hover:from-[#330BFF] hover:to-[#BF7272] hover:text-white transition-all duration-300 uppercase tracking-wide font-mono">
               JOIN THE PARTY
               <ArrowUpRight className="w-7 h-7 group-hover:rotate-45 transition-transform duration-300" />
             </button>
           </div>
         </div>
 
-        {/* Right content - VOLT GIF */}
-        <div className="flex-shrink-0 absolute right-0 top-0">
+        {/* Right content - VOLT GIF (hidden on mobile) */}
+        <div className="hidden xl:block flex-shrink-0 absolute right-0 top-0">
           <img
             src="/VOLT.gif"
             alt="VOLT Animation"
@@ -58,8 +66,13 @@ export default function HeroSection() {
       </div>
 
       {/* Feature Badges Section - Repositioned below button with full width */}
-      <div className="relative z-10 pb-8 mt-8 w-full">
-        <FeatureBadges />
+      <div className="relative z-10 pb-4 md:pb-8 mt-8 w-full px-4 md:px-0">
+        <div className="hidden md:block">
+          <FeatureBadges />
+        </div>
+        <div className="md:hidden">
+          <FeatureBadges />
+        </div>
       </div>
 
       {/* Bottom fade */}
