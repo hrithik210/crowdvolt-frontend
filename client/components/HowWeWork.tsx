@@ -492,7 +492,7 @@ export default function HowWeWork() {
   ];
 
   return (
-    <section className="md:py-20 w-full md:px-6 relative overflow-visible">
+    <section className="md:py-20 w-full md:px-6 relative opacity-85">
       <div className="max-w-7xl mx-auto relative">
         {/* keep your left-side large SVG and main container unchanged */}
         <svg
@@ -503,22 +503,59 @@ export default function HowWeWork() {
           xmlns="http://www.w3.org/2000/svg"
           className="hidden md:block absolute -left-[50px] -top-[250px] z-0"
         >
-          {/* ...left SVG unchanged */}
+        <g filter="url(#filter0_f_1_605)">
+        <path
+              d="M360.848 91.8068H370.9C374.648 91.8069 377.906 93.9682 379.904 97.3342C381.904 100.702 382.555 105.164 381.087 109.46L256.696 473.394C254.977 478.413 250.869 481.487 246.51 481.487H234.354C228.208 481.486 222.832 475.372 223.412 467.705C224.307 455.895 221.451 445.513 215.357 438.051C209.241 430.561 200.005 426.191 188.542 426.191C175.824 426.191 162.513 431.559 150.821 440.264C139.117 448.978 128.914 461.124 122.425 474.888V474.889C120.456 479.07 116.727 481.502 112.846 481.502H102.793C99.0454 481.502 95.7865 479.341 93.7881 475.975C91.7885 472.607 91.1369 468.145 92.6055 463.849L216.996 99.9172C218.715 94.8973 222.823 91.8235 227.183 91.8234H239.339C245.484 91.8234 250.861 97.938 250.281 105.605C249.387 117.414 252.242 127.796 258.335 135.258C264.451 142.748 273.687 147.119 285.15 147.119C297.868 147.119 311.18 141.75 322.871 133.045C334.575 124.331 344.778 112.185 351.268 98.4211L351.269 98.4201C353.237 94.2394 356.966 91.8068 360.848 91.8068Z"
+              fill="#771ADA"
+              stroke="#7719DC"
+              strokeWidth="3.6141"
+            />
+            <path
+              d="M305.283 356.993H416.192C420.656 356.993 424.265 359.948 426.048 364.21C427.83 368.471 427.646 373.773 424.693 378.016L206.864 690.862L206.863 690.863C204.822 693.796 202.384 695.201 200.02 695.591C197.63 695.984 195.135 695.368 192.966 693.927C188.637 691.049 185.77 684.975 188.175 677.932L188.992 675.542H188.979L295.095 365.088C296.814 360.068 300.923 356.993 305.283 356.993Z"
+              fill="#771ADA"
+              stroke="#7719DC"
+              strokeWidth="3.6141"
+            />
+        </g>
+          <defs>
+            <filter
+              id="filter0_f_1_605"
+              x="0"
+              y="0.000183105"
+              width="519"
+              height="787.515"
+              filterUnits="userSpaceOnUse"
+              colorInterpolationFilters="sRGB"
+            >
+              <feFlood floodOpacity="0" result="BackgroundImageFix" />
+              <feBlend
+                mode="normal"
+                in="SourceGraphic"
+                in2="BackgroundImageFix"
+                result="shape"
+              />
+              <feGaussianBlur
+                stdDeviation="45"
+                result="effect1_foregroundBlur_1_605"
+              />
+            </filter>
+            
+          </defs>
+        
         </svg>
-        <div className="relative z-10 md:bg-gradient-to-b from-black/50 to-crowdvolt-gradient-start/50 md:rounded-[50px] md:border-t md:border-white/10 md:p-12 overflow-visible">
+
+       <div className="relative z-10 md:bg-gradient-to-b from-black/50 to-crowdvolt-gradient-start/50  md:rounded-[50px] md:border-t md:border-white/10 md:p-12 overflow-visible">
           {/* Header (unchanged) */}
-          <div className="text-left sm:text-center mb-0 md:mb-16">
-            <div className="flex items-center sm:justify-center gap-2 mb-6 ml-8">
+          <div className="text-center mb-0 md:mb-16">
+            <div className="flex items-center justify-center gap-2 mb-6">
               <h2 className="text-5xl lg:text-7xl font-medium text-text-primary">
                 How
               </h2>
-              <h2 className="text-5xl lg:text-7xl font-serif italic flex">
-                we work
-                <span className="sm:hidden">:</span>
-                <span className="hidden sm:inline">.</span>
+              <h2 className="text-5xl lg:text-7xl font-serif italic text-text-primary">
+                we work.
               </h2>
             </div>
-            <p className="text-gray-medium text-md md:text-lg max-w-lg text-right md:text-center mr-5 md:mx-auto md:mb-8 mb-0">
+            <p className="text-gray-medium text-lg max-w-lg mx-auto md:mb-8 mb-0">
               CrowdVolt is a social platform where fans can securely and
               seamlessly buy, sell, or offer on tickets to the shows they love.
             </p>
@@ -546,23 +583,27 @@ export default function HowWeWork() {
               EXPLORE EVENTS
             </button>
           </div>
-        </div>
 
-        {/* Mobile-only balls layout (zigzag) */}
-        <div className="md:hidden">
-          {mobileSvgs.map((Svg, i) => (
-            <div
-              key={i}
-              className={`flex ${
-                i % 2 === 0 ? "justify-start" : "justify-end"
-              } transform transition-transform duration-500 will-change-transform ${
-                i > 0 ? "-mt-52" : ""
-              }`}
-              aria-hidden
-            >
-              <div className="relative">{Svg}</div>
-            </div>
-          ))}
+          {/* Mobile-only balls layout (zigzag) */}
+          <div className="md:hidden overflow-x-hidden">
+            {mobileSvgs.map((Svg, i) => (
+              <div
+                key={i}
+                className={`flex ${
+                  i % 2 === 0 ? "justify-start pl-4" : "justify-end pr-4"
+                } transform transition-transform duration-500 will-change-transform ${
+                  i > 0 ? "-mt-52" : ""
+                }`}
+                style={{
+                  transform:
+                    i % 2 === 0 ? "translateX(-10px)" : "translateX(10px)",
+                }}
+                aria-hidden
+              >
+                <div className="relative max-w-full overflow-hidden">{Svg}</div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
