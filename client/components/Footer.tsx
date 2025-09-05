@@ -2,18 +2,19 @@ export default function Footer() {
   return (
     <footer className="bg-radial-purple py-10 md:py-16 px-4 md:px-6">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 mb-10 md:mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 mb-10 md:mb-16" style={{ gap: '20px' }}>
           {/* Left section */}
           <div className="space-y-6 md:space-y-8">
             <div>
-              <img
-                src="/Link → CrowdVolt Logo.png"
-                alt="CrowdVolt Logo"
-                className="h-10 md:h-14 w-auto mb-4 md:mb-6"
-              />
-              <h3 className="text-white text-2xl md:text-3xl lg:text-4xl font-medium leading-tight">
-                No more excuses, you're coming out tonight.
-              </h3>
+              <h3 className="text-white text-2xl md:text-3xl lg:text-4xl font-medium leading-tight mb-6">
+                 No more excuses, you're coming out tonight.
+               </h3>
+               
+               <img
+                 src="/Link → CrowdVolt Logo.png"
+                 alt="CrowdVolt Logo"
+                 className="h-10 md:h-14 w-auto"
+               />
             </div>
           </div>
 
@@ -75,7 +76,6 @@ export default function Footer() {
 
             {/* Social Icons */}
             <div>
-              <h4 className="text-white text-base md:text-lg font-medium mb-4 md:mb-6">Follow Us</h4>
               <div className="flex flex-row md:flex-col items-center space-x-3 md:space-x-0 space-y-0 md:space-y-4">
                 {/* Instagram */}
                 <a href="#" className="hover:scale-110 transition-transform">
