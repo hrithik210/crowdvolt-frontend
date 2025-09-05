@@ -30,10 +30,17 @@ export default function HeroSection() {
             For the music lovers. Easy, secure, and stress-free ticketing that keeps
             the focus where it belongs: on the music.
           </p>
-          <button className="group flex items-center gap-3 border border-white rounded-full w-[298px] h-[70px] justify-center text-white font-medium text-lg hover:bg-white hover:text-black transition-all duration-300 uppercase tracking-wide font-mono">
-            JOIN THE PARTY
-            <ArrowUpRight className="w-7 h-7 group-hover:rotate-45 transition-transform duration-300" />
-          </button>
+          <div className="relative group">
+            {/* Gradient border effect */}
+            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-[#330BFF] to-[#BF7272] p-[2px]">
+              <div className="w-full h-full bg-black rounded-full"></div>
+            </div>
+            
+            <button className="relative flex items-center gap-3 border-none rounded-full w-[298px] h-[70px] justify-center text-white font-medium text-lg hover:bg-gradient-to-r hover:from-[#330BFF] hover:to-[#BF7272] hover:text-white transition-all duration-300 uppercase tracking-wide font-mono">
+              JOIN THE PARTY
+              <ArrowUpRight className="w-7 h-7 group-hover:rotate-45 transition-transform duration-300" />
+            </button>
+          </div>
         </div>
 
         {/* Right content - VOLT GIF */}
@@ -50,8 +57,8 @@ export default function HeroSection() {
         </div>
       </div>
 
-      {/* Feature Badges Section */}
-      <div className="relative z-10 pb-8 mt-20">
+      {/* Feature Badges Section - Repositioned below button with full width */}
+      <div className="relative z-10 pb-8 mt-8 w-full">
         <FeatureBadges />
       </div>
 
