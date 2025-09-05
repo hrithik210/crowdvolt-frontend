@@ -57,8 +57,7 @@ export default function HeroSection() {
             src="/VOLT.gif"
             alt="VOLT Animation"
             className="w-[400px] h-[544px] object-cover max-w-none"
-            style={{ 
-              filter: 'blur(5.13px)',
+            style={{
               mixBlendMode: 'lighten'
             }}
           />

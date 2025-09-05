@@ -7,7 +7,7 @@ export default function Header() {
         {/* Logo */}
         <div className="flex items-center">
           <img 
-            src="https://api.builder.io/api/v1/image/assets/TEMP/0cfd83c1b79f5ce3b99c914f3f7d3a122c07be42?width=226" 
+            src="/Link → CrowdVolt Logo.png" 
             alt="CrowdVolt Logo" 
             className="h-8 md:h-10 w-auto"
           />
