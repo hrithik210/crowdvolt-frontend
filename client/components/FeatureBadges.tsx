@@ -52,25 +52,8 @@ export default function FeatureBadges() {
 
   return (
     <section className="py-4 sm:py-6 md:py-10 lg:py-16 w-full">
-      <div className="w-full">
+      <div className="max-w-4xl mx-auto">
         <div className="relative">
-          {/* Navigation buttons */}
-          <button
-            onClick={prevSlide}
-            className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 z-10 bg-black/50 hover:bg-black/70 border border-white/20 rounded-full p-1 md:p-2 transition-all duration-300"
-            aria-label="Previous features"
-          >
-            <ChevronLeft className="w-4 h-4 md:w-6 md:h-6 text-white" />
-          </button>
-          
-          <button
-            onClick={nextSlide}
-            className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 z-10 bg-black/50 hover:bg-black/70 border border-white/20 rounded-full p-1 md:p-2 transition-all duration-300"
-            aria-label="Next features"
-          >
-            <ChevronRight className="w-4 h-4 md:w-6 md:h-6 text-white" />
-          </button>
-
           {/* Carousel container */}
           <div className="overflow-hidden px-10 sm:px-16">
             <div 
@@ -102,8 +85,8 @@ export default function FeatureBadges() {
                         fill="none" 
                         xmlns="http://www.w3.org/2000/svg"
                       >
-                        {/* Oval background with gradient */}
-                        <ellipse cx="40" cy="30" rx="40" ry="30" fill="url(#ovalGradient)"/>
+                        {/* Circle background with gradient */}
+                        <circle cx="40" cy="30" r="25" fill="url(#ovalGradient)"/>
                         
                         {/* Lightning bolt centered in the oval */}
                         <g transform="translate(25.88, 6.04)">

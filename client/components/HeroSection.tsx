@@ -3,7 +3,7 @@ import FeatureBadges from "./FeatureBadges";
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-screen bg-black overflow-hidden">
+    <section className="relative bg-black overflow-hidden pb-12">
       {/* Background with smooth gradient fade from black to purple (desktop) and L-shape gradient (mobile) */}
       <div className="absolute inset-0 hidden md:block" style={{}}>
         <svg
@@ -87,11 +87,11 @@ export default function HeroSection() {
       </div>
 
       {/* Geometric pattern overlay */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-20 left-20 w-64 h-64 border border-purple-500/20 transform rotate-12"></div>
-        <div className="absolute top-40 right-32 w-32 h-32 border border-purple-400/15 transform -rotate-45"></div>
-        <div className="absolute bottom-32 left-1/4 w-48 h-48 border border-purple-300/10 transform rotate-45"></div>
-      </div>
+      {/* <div className="absolute inset-0 opacity-10"> */}
+      {/*   <div className="absolute top-20 left-20 w-64 h-64 border border-purple-500/20 transform rotate-12"></div> */}
+      {/*   <div className="absolute top-40 right-32 w-32 h-32 border border-purple-400/15 transform -rotate-45"></div> */}
+      {/*   <div className="absolute bottom-32 left-1/4 w-48 h-48 border border-purple-300/10 transform rotate-45"></div> */}
+      {/* </div> */}
 
       <div className="relative z-10 max-w-[1317px] mx-auto px-4 sm:px-6 py-6 sm:py-8 flex items-start justify-center md:justify-between min-h-[450px] sm:min-h-[500px] md:min-h-[544px] mt-[80px] sm:mt-[100px] md:mt-[167px] w-full">
         {/* Content - centered on mobile, left-aligned on desktop */}
@@ -143,4 +143,3 @@ export default function HeroSection() {
     </section>
   );
 }
-
